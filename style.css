@@ -1,1 +1,265 @@
-/* Add you CSS here */
+/* ===================================
+   RESET & BASE STYLES
+   =================================== */
+
+/* Reset default browser margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font family and base text color */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Make links easier to click and style */
+a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* ===================================
+   CONTAINER (for centered content)
+   =================================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===================================
+   HEADER & NAVIGATION
+   =================================== */
+
+.header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation links in header */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3498db;
+}
+
+/* ===================================
+   MAIN SECTION STYLES
+   =================================== */
+
+.section {
+  padding: 60px 0;
+}
+
+/* Heading styles */
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* ===================================
+   ABOUT SECTION
+   =================================== */
+
+.about-section {
+  background-color: white;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #3498db;
+  flex-shrink: 0;
+}
+
+/* ===================================
+   SKILLS SECTION
+   =================================== */
+
+.skills-section {
+  background-color: #ecf0f1;
+}
+
+/* Create a 4-column layout for skill cards */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual skill card styling */
+.skill-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect to skill cards */
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card h3 {
+  color: #3498db;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.skill-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* ===================================
+   CONTACT SECTION
+   =================================== */
+
+.contact-section {
+  background-color: white;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Container for contact buttons */
+.contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Styling for contact buttons */
+.contact-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN (Mobile-friendly)
+   =================================== */
+
+/* On smaller screens (tablets and phones) */
+@media (max-width: 768px) {
+  /* Stack header navigation vertically on very small screens */
+  .nav {
+    gap: 15px;
+  }
+
+  /* Stack about section vertically */
+  .about-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Make skill cards full width on mobile */
+  .skill-card {
+    width: 100%;
+  }
+
+  /* Adjust heading size for mobile */
+  .section h2 {
+    font-size: 28px;
+  }
+
+  /* Stack contact buttons vertically on mobile */
+  .contact-methods {
+    flex-direction: column;
+  }
+
+  .contact-button {
+    width: 100%;
+  }
+}
